@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommonLibrary.Android", "Co
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommonLibrary.iOS", "CommonLibrary\CommonLibrary.iOS\CommonLibrary.iOS.vcxproj", "{3A653CD2-2725-4670-8DCE-124DFE6F269F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CrossCppWPApp", "..\CrossCppWPApp\CrossCppWPApp.vcxproj", "{9D669285-8F9E-4B2B-939C-825960C1CC14}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		CommonLibrary\CommonLibrary.Shared\CommonLibrary.Shared.vcxitems*{851653e8-1744-4866-84a8-4d069f2343b9}*SharedItemsImports = 4
@@ -38,6 +40,18 @@ Global
 		{3A653CD2-2725-4670-8DCE-124DFE6F269F}.Release|ARM.Build.0 = Release|ARM
 		{3A653CD2-2725-4670-8DCE-124DFE6F269F}.Release|x86.ActiveCfg = Release|x86
 		{3A653CD2-2725-4670-8DCE-124DFE6F269F}.Release|x86.Build.0 = Release|x86
+		{9D669285-8F9E-4B2B-939C-825960C1CC14}.Debug|ARM.ActiveCfg = Debug|ARM
+		{9D669285-8F9E-4B2B-939C-825960C1CC14}.Debug|ARM.Build.0 = Debug|ARM
+		{9D669285-8F9E-4B2B-939C-825960C1CC14}.Debug|ARM.Deploy.0 = Debug|ARM
+		{9D669285-8F9E-4B2B-939C-825960C1CC14}.Debug|x86.ActiveCfg = Debug|Win32
+		{9D669285-8F9E-4B2B-939C-825960C1CC14}.Debug|x86.Build.0 = Debug|Win32
+		{9D669285-8F9E-4B2B-939C-825960C1CC14}.Debug|x86.Deploy.0 = Debug|Win32
+		{9D669285-8F9E-4B2B-939C-825960C1CC14}.Release|ARM.ActiveCfg = Release|ARM
+		{9D669285-8F9E-4B2B-939C-825960C1CC14}.Release|ARM.Build.0 = Release|ARM
+		{9D669285-8F9E-4B2B-939C-825960C1CC14}.Release|ARM.Deploy.0 = Release|ARM
+		{9D669285-8F9E-4B2B-939C-825960C1CC14}.Release|x86.ActiveCfg = Release|Win32
+		{9D669285-8F9E-4B2B-939C-825960C1CC14}.Release|x86.Build.0 = Release|Win32
+		{9D669285-8F9E-4B2B-939C-825960C1CC14}.Release|x86.Deploy.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
