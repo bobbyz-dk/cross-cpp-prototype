@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommonLibrary.Shared", "CommonLibrary\CommonLibrary.Shared\CommonLibrary.Shared.vcxitems", "{CF6B0622-5638-4BBA-948C-C43B87ED3EB1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommonLibrary.Android", "CommonLibrary\CommonLibrary.Android\CommonLibrary.Android.vcxproj", "{851653E8-1744-4866-84A8-4D069F2343B9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommonLibrary.iOS", "CommonLibrary\CommonLibrary.iOS\CommonLibrary.iOS.vcxproj", "{3A653CD2-2725-4670-8DCE-124DFE6F269F}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		CommonLibrary\CommonLibrary.Shared\CommonLibrary.Shared.vcxitems*{851653e8-1744-4866-84a8-4d069f2343b9}*SharedItemsImports = 4
+		CommonLibrary\CommonLibrary.Shared\CommonLibrary.Shared.vcxitems*{3a653cd2-2725-4670-8dce-124dfe6f269f}*SharedItemsImports = 4
+		CommonLibrary\CommonLibrary.Shared\CommonLibrary.Shared.vcxitems*{cf6b0622-5638-4bba-948c-c43b87ed3eb1}*SharedItemsImports = 9
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{851653E8-1744-4866-84A8-4D069F2343B9}.Debug|ARM.ActiveCfg = Debug|ARM
+		{851653E8-1744-4866-84A8-4D069F2343B9}.Debug|ARM.Build.0 = Debug|ARM
+		{851653E8-1744-4866-84A8-4D069F2343B9}.Debug|x86.ActiveCfg = Debug|x86
+		{851653E8-1744-4866-84A8-4D069F2343B9}.Debug|x86.Build.0 = Debug|x86
+		{851653E8-1744-4866-84A8-4D069F2343B9}.Release|ARM.ActiveCfg = Release|ARM
+		{851653E8-1744-4866-84A8-4D069F2343B9}.Release|ARM.Build.0 = Release|ARM
+		{851653E8-1744-4866-84A8-4D069F2343B9}.Release|x86.ActiveCfg = Release|x86
+		{851653E8-1744-4866-84A8-4D069F2343B9}.Release|x86.Build.0 = Release|x86
+		{3A653CD2-2725-4670-8DCE-124DFE6F269F}.Debug|ARM.ActiveCfg = Debug|ARM
+		{3A653CD2-2725-4670-8DCE-124DFE6F269F}.Debug|ARM.Build.0 = Debug|ARM
+		{3A653CD2-2725-4670-8DCE-124DFE6F269F}.Debug|x86.ActiveCfg = Debug|x86
+		{3A653CD2-2725-4670-8DCE-124DFE6F269F}.Debug|x86.Build.0 = Debug|x86
+		{3A653CD2-2725-4670-8DCE-124DFE6F269F}.Release|ARM.ActiveCfg = Release|ARM
+		{3A653CD2-2725-4670-8DCE-124DFE6F269F}.Release|ARM.Build.0 = Release|ARM
+		{3A653CD2-2725-4670-8DCE-124DFE6F269F}.Release|x86.ActiveCfg = Release|x86
+		{3A653CD2-2725-4670-8DCE-124DFE6F269F}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
