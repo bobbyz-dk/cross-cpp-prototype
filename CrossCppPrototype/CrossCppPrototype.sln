@@ -13,6 +13,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CrossCppWPApp", "..\CrossCp
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		CommonLibrary\CommonLibrary.Shared\CommonLibrary.Shared.vcxitems*{9d669285-8f9e-4b2b-939c-825960c1cc14}*SharedItemsImports = 4
 		CommonLibrary\CommonLibrary.Shared\CommonLibrary.Shared.vcxitems*{851653e8-1744-4866-84a8-4d069f2343b9}*SharedItemsImports = 4
 		CommonLibrary\CommonLibrary.Shared\CommonLibrary.Shared.vcxitems*{3a653cd2-2725-4670-8dce-124dfe6f269f}*SharedItemsImports = 4
 		CommonLibrary\CommonLibrary.Shared\CommonLibrary.Shared.vcxitems*{cf6b0622-5638-4bba-948c-c43b87ed3eb1}*SharedItemsImports = 9

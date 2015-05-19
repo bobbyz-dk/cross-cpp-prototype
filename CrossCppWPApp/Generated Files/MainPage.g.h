@@ -8,6 +8,18 @@
 //     the code is regenerated.
 //------------------------------------------------------------------------------
 
+namespace Windows {
+    namespace UI {
+        namespace Xaml {
+            namespace Controls {
+                ref class TextBlock;
+                ref class TextBox;
+                ref class Button;
+                ref class ListView;
+            }
+        }
+    }
+}
 
 namespace CrossCppWPApp
 {
@@ -21,6 +33,10 @@ namespace CrossCppWPApp
     private:
         bool _contentLoaded;
     
+        private: ::Windows::UI::Xaml::Controls::TextBlock^ textBlock;
+        private: ::Windows::UI::Xaml::Controls::TextBox^ txtText;
+        private: ::Windows::UI::Xaml::Controls::Button^ btnInsert;
+        private: ::Windows::UI::Xaml::Controls::ListView^ lvTexts;
     };
 }
 

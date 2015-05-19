@@ -6,6 +6,7 @@
 #pragma once
 
 #include "MainPage.g.h"
+#include "TextDao.h"
 
 namespace CrossCppWPApp
 {
@@ -19,5 +20,9 @@ namespace CrossCppWPApp
 
 	protected:
 		virtual void OnNavigatedTo(Windows::UI::Xaml::Navigation::NavigationEventArgs^ e) override;
+	private:
+		TextDao *textDao;
+		void btnInsert_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void FillList();
 	};
 }
