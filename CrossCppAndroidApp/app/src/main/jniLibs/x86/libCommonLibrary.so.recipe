@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <SOLibPaths>C:\Users\Bobby\documents\visual studio 2015\Projects\HelloWorldVCpp\x86\Debug\libCommonLibrary.so;C:\apps\MicrosoftVisualStudio2015\Apps\android-ndk-r10\prebuilt\android-x86\gdbserver\gdbserver;C:\apps\MicrosoftVisualStudio2015\Apps\android-ndk-r10\sources\cxx-stl\gnu-libstdc++\4.8\libs\x86\libgnustl_static.a</SOLibPaths>
+  <OObjPaths>C:\Users\Bobby\documents\visual studio 2015\Projects\HelloWorldVCpp\CommonLibrary\CommonLibrary.Android\x86\Debug</OObjPaths>
+  <Configuration>Debug</Configuration>
+  <Platform>x86</Platform>
+  <AndroidArchitecture>x86</AndroidArchitecture>
+  <!--links to other recipe files-->
+  <RecipeFiles />
+</project>

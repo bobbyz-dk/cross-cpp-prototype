@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <SOLibPaths>C:\Users\Bobby\documents\visual studio 2015\Projects\HelloWorldVCpp\ARM\Debug\libCommonLibrary.so;C:\apps\MicrosoftVisualStudio2015\Apps\android-ndk-r10\prebuilt\android-arm\gdbserver\gdbserver;C:\apps\MicrosoftVisualStudio2015\Apps\android-ndk-r10\sources\cxx-stl\gnu-libstdc++\4.8\libs\armeabi-v7a\thumb\libgnustl_static.a</SOLibPaths>
+  <OObjPaths>C:\Users\Bobby\documents\visual studio 2015\Projects\HelloWorldVCpp\CommonLibrary\CommonLibrary.Android\ARM\Debug</OObjPaths>
+  <Configuration>Debug</Configuration>
+  <Platform>ARM</Platform>
+  <AndroidArchitecture>armeabi-v7a</AndroidArchitecture>
+  <!--links to other recipe files-->
+  <RecipeFiles />
+</project>
