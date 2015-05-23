@@ -28,3 +28,9 @@
 *.app
 CrossCppWPApp/Debug/
 CrossCppPrototype/Debug/
+CrossCppWPApp/ARM/
+CrossCppPrototype/ipch/CROSSCPPWPAPP-7f469be6/CROSSCPPWPAPP-af1a821d.ipch
+CrossCppPrototype/CommonLibrary/CommonLibrary.Android/ARM/
+CrossCppPrototype/CommonLibrary/CommonLibrary.iOS/ARM/
+CrossCppPrototype/CommonLibrary/CommonLibrary.iOS/x86/
+CrossCppPrototype/ipch/

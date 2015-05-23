@@ -2,9 +2,14 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="CommonLibrary.Android.cpp" />
+    <ClCompile Include="android_TextDao.cpp" />
+    <ClCompile Include="sqlite3.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="handle.h" />
+    <ClInclude Include="android_TextDao.h" />
+    <ClInclude Include="sqlite3.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

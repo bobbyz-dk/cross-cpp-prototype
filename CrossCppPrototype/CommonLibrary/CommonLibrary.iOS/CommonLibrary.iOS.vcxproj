@@ -56,6 +56,10 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <ExecutablePath>Z:\Toolchains\XcodeDefault.xctoolchain\usr\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>Z:\Toolchains\XcodeDefault.xctoolchain\usr\include;$(IncludePath)</IncludePath>
+    <LibraryPath>Z:\Toolchains\XcodeDefault.xctoolchain\usr\lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>C:\master-dev\cross-cpp-prototype\CrossCppPrototype\CommonLibrary\CommonLibrary.Shared;C:\master-dev\cross-cpp-prototype\CrossCppPrototype\CommonLibrary\CommonLibrary.iOS;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
   </PropertyGroup>

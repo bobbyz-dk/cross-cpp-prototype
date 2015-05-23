@@ -54,12 +54,15 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <IncludePath>$(LLVMToolchainPrebuiltRoot)\lib\clang\$(LLVMVersion)\include;c:\master-dev\cross-cpp-prototype\CrossCppPrototype\CommonLibrary\CommonLibrary.Android;</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalOptions>-D PLATFORM=0 %(AdditionalOptions)</AdditionalOptions>
+      <Verbose>true</Verbose>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
@@ -84,10 +87,15 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="android_TextDao.h" />
+    <ClInclude Include="handle.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="sqlite3.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="android_TextDao.cpp" />
     <ClCompile Include="CommonLibrary.Android.cpp" />
+    <ClCompile Include="sqlite3.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

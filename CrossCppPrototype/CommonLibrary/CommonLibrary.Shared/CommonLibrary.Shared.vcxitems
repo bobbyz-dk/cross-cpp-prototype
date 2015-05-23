@@ -14,13 +14,11 @@
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)CommonLibrary.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)DBManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Text.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)TextDao.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)CommonLibrary.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)DBManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)TextDao.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Text.h" />
