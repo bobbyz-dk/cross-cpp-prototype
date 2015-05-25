@@ -35,7 +35,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>Clang_3_4</PlatformToolset>
+    <PlatformToolset>Gcc_4_8</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -55,7 +55,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <IncludePath>$(LLVMToolchainPrebuiltRoot)\lib\clang\$(LLVMVersion)\include;c:\master-dev\cross-cpp-prototype\CrossCppPrototype\CommonLibrary\CommonLibrary.Android;</IncludePath>
+    <IncludePath>$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\4.8\include;c:\master-dev\cross-cpp-prototype\CrossCppPrototype\CommonLibrary\CommonLibrary.Android;</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>

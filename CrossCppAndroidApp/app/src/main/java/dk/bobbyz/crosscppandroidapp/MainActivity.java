@@ -3,6 +3,7 @@ package dk.bobbyz.crosscppandroidapp;
 import android.os.Environment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -36,10 +37,11 @@ public class MainActivity extends ActionBarActivity {
         list = (ListView) findViewById(R.id.list);
 
         String sqliteFilename = "TextDB.db";
-        String dataDir = Environment.getDataDirectory().toString();
-        String path = String.format("%s/CrossCppAndroidApp/databases/%s", dataDir, sqliteFilename);
+        String dataDir = Environment.getDataDirectory().getAbsolutePath();
+        String path = String.format("/data%s/dk.bobbyz.crosscppandroidapp/databases/%s", dataDir, sqliteFilename);
         textDao = new TextDaoImpl(this, path);
-        fillList();
+        Log.d("MainActivity.", "onCreate, nativehandle: " + textDao.getNativeHandle());
+        //fillList();
     }
 
     private void fillList() {
@@ -54,7 +56,7 @@ public class MainActivity extends ActionBarActivity {
 
     public void insertText (View view) {
         Text text = new Text(txtText.getText().toString());
-
+        Log.d("MainActivity.", "insertText, nativehandle: " + textDao.getNativeHandle());
         textDao.insert(text);
         txtText.setText("");
 

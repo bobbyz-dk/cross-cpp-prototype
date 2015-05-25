@@ -18,4 +18,5 @@ public:
 
 private:
 	DBManager *db;
+	string dbPath;
 };

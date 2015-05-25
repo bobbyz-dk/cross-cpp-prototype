@@ -11,4 +11,6 @@ public interface TextDao {
     List<Text> findAll();
 
     void insert(Text text);
+
+    long getNativeHandle();
 }

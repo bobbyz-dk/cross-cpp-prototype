@@ -14,12 +14,14 @@ public:
 	DBManager(char* filename);
 	~DBManager();
 
+	char* getDbPath();
 	bool open(char* filename);
-	vector<vector<string>> query(char* query);
+	vector<vector<string> > query(char* query);
 	void close();
 
 private:
 	sqlite3 *database;
+	char *dbPath;
 };
 
 #endif

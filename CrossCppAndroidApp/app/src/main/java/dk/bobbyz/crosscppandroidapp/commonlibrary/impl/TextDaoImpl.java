@@ -25,6 +25,11 @@ public class TextDaoImpl implements TextDao{
 
     public TextDaoImpl(Context context, String dbPath) {
         this.context = context;
+        try {
+            copyDataBase();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         nativeHandle = this.initTextDao(dbPath);
         this.dbPath = dbPath;
     }
@@ -48,9 +53,16 @@ public class TextDaoImpl implements TextDao{
 
         String DB_NAME = "TextDB.db";
         String dataDir = Environment.getDataDirectory().toString();
-        String path = String.format("%s/CrossCppAndroidApp/databases/%s", dataDir, DB_NAME);
+        String path = String.format("/data%s/dk.bobbyz.crosscppandroidapp/databases/%s", dataDir, DB_NAME);
 
-        if (!doesDatabaseExist(path)) {
+        File folder = new File(String.format("/data%s/dk.bobbyz.crosscppandroidapp/databases", dataDir));
+
+        boolean success = true;
+        if (!folder.exists()) {
+            success = folder.mkdir();
+        }
+
+        if (success && !doesDatabaseExist(path)) {
             InputStream myInput = context.getAssets().open(DB_NAME);
 
             OutputStream myOutput = new FileOutputStream(path);
@@ -66,5 +78,9 @@ public class TextDaoImpl implements TextDao{
             myOutput.close();
             myInput.close();
         }
+    }
+
+    public long getNativeHandle() {
+        return nativeHandle;
     }
 }
