@@ -34,3 +34,5 @@ CrossCppPrototype/CommonLibrary/CommonLibrary.Android/ARM/
 CrossCppPrototype/CommonLibrary/CommonLibrary.iOS/ARM/
 CrossCppPrototype/CommonLibrary/CommonLibrary.iOS/x86/
 CrossCppPrototype/ipch/
+CrossCppPrototype/CommonLibrary/CommonLibrary.Android/x86/
+CrossCppPrototype/ARM/Debug/libCommonLibrary.so.recipe

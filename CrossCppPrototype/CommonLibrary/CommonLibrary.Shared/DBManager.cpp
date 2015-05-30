@@ -1,20 +1,18 @@
 #include "DBManager.h"
 #include <string>
-#include <android/log.h>
-
-#define LOGD(TAG,...) __android_log_print(ANDROID_LOG_DEBUG  , TAG,__VA_ARGS__)
+#include "log.h"
 
 DBManager::DBManager(char * filename)
 {
-	LOGD("DBManager", "DBManager1_1");
+	logdebug("DBManager", "DBManager1_1");
 	database = NULL;
-	LOGD("DBManager", "DBManager1_2");
+	logdebug("DBManager", "DBManager1_2");
 	dbPath = filename;
-	LOGD("DBManager", "DBManager1_3");
+	logdebug("DBManager", "DBManager1_3");
 	open(getDbPath());
-	LOGD("DBManager", "DBManager1_4");
+	logdebug("DBManager", "DBManager1_4");
 	close();
-	LOGD("DBManager", "DBManager1_5");
+	logdebug("DBManager", "DBManager1_5");
 }
 
 DBManager::~DBManager()
@@ -28,10 +26,10 @@ char * DBManager::getDbPath()
 
 bool DBManager::open(char* filename)
 {
-	LOGD("DBManager", "open1");
+	logdebug("DBManager", "open1");
 	if (sqlite3_open(filename, &database) == SQLITE_OK)
 		return true;
-	LOGD("DBManager", "open2");
+	logdebug("DBManager", "open2");
 	return false;
 }
 
@@ -68,7 +66,8 @@ vector<vector<string> > DBManager::query(char* query)
 	string error = sqlite3_errmsg(database);
 	if (error != "not an error")
 	{
-		printf("%s: %s", query, error.c_str());
+		logdebug("DBManager.query", query);
+		logdebug("DBManager.query", error.c_str());
 	}
 	return results;
 }

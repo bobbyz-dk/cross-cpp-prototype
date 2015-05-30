@@ -93,6 +93,7 @@
     <ClInclude Include="sqlite3.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\CommonLibrary.Shared\log.cpp" />
     <ClCompile Include="android_TextDao.cpp" />
     <ClCompile Include="CommonLibrary.Android.cpp" />
     <ClCompile Include="sqlite3.c" />
