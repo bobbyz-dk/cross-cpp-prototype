@@ -5,6 +5,8 @@
 
 #include "pch.h"
 #include "MainPage.xaml.h"
+#include "Twitter.xaml.h"
+#include "Rest.xaml.h"
 
 using namespace CrossCppWPApp;
 
@@ -94,7 +96,7 @@ void App::OnLaunched(LaunchActivatedEventArgs^ e)
 		// When the navigation stack isn't restored navigate to the first page,
 		// configuring the new page by passing required information as a navigation
 		// parameter.
-		if (!rootFrame->Navigate(MainPage::typeid, e->Arguments))
+		if (!rootFrame->Navigate(Rest::typeid, e->Arguments))
 		{
 			throw ref new FailureException("Failed to create initial page");
 		}

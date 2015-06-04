@@ -75,8 +75,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\master-dev\cross-cpp-prototype\CrossCppPrototype\CommonLibrary\CommonLibrary.Shared\libtwitcurl\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\master-dev\cross-cpp-prototype\CrossCppPrototype\CommonLibrary\CommonLibrary.Shared\json_spirit;C:\master-dev\cross-cpp-prototype\CrossCppPrototype\CommonLibrary\CommonLibrary.Shared\libtwitcurl\include;C:\Users\Bobby\Downloads\poco-1.6.0\poco-1.6.0\Net\include;C:\Users\Bobby\Downloads\boost_1_46_0\boost_1_46_0\boost\spirit\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\master-dev\cross-cpp-prototype\CrossCppWPApp\poco;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
@@ -95,7 +95,7 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>C:\master-dev\cross-cpp-prototype\CrossCppPrototype\CommonLibrary\CommonLibrary.Shared;C:\master-dev\cross-cpp-prototype\CrossCppPrototype\CommonLibrary\CommonLibrary.Shared\libtwitcurl\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Bobby\Downloads\poco-1.6.0\poco-1.6.0\Foundation\include;C:\master-dev\cross-cpp-prototype\CrossCppPrototype\CommonLibrary\CommonLibrary.Shared;C:\master-dev\cross-cpp-prototype\CrossCppPrototype\CommonLibrary\CommonLibrary.Shared\libtwitcurl\lib;C:\Users\Bobby\Downloads\boost_1_46_0\boost_1_46_0\boost\spirit\include;C:\Users\Bobby\Downloads\poco-1.6.0\poco-1.6.0\Net\include;C:\Users\Bobby\Downloads\boost_1_46_0\boost_1_46_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions);CURL_STATICLIB</PreprocessorDefinitions>
       <CompileAsManaged>
@@ -126,6 +126,15 @@
     <ClInclude Include="MainPage.xaml.h">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="Publisher.h" />
+    <ClInclude Include="Rest.xaml.h">
+      <DependentUpon>Rest.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="RestApi.WP.h" />
+    <ClInclude Include="Twitter.xaml.h">
+      <DependentUpon>Twitter.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="TwitterApi.WP.h" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -134,6 +143,8 @@
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Rest.xaml" />
+    <Page Include="Twitter.xaml" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -161,6 +172,13 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Rest.xaml.cpp">
+      <DependentUpon>Rest.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="RestApi.WP.cpp" />
+    <ClCompile Include="Twitter.xaml.cpp">
+      <DependentUpon>Twitter.xaml</DependentUpon>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
