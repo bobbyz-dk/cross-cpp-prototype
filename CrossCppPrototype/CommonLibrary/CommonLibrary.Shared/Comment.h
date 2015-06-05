@@ -3,12 +3,12 @@
 #include <string>
 #include <stdio.h>
 #include <time.h>
-#include "json_spirit.h"
+//#include "json_spirit.h"
 
 namespace model
 {
 	using namespace std;
-	using namespace json_spirit;
+	//using namespace json_spirit;
 
 	class Comment
 	{

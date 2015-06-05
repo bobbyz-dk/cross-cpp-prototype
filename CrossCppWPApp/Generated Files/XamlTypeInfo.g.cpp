@@ -76,16 +76,6 @@
         return ref new XamlSystemBaseType(typeName);
     }
 
-    if (typeName == L"Object")
-    {
-        return ref new XamlSystemBaseType(typeName);
-    }
-
-    if (typeName == L"String")
-    {
-        return ref new XamlSystemBaseType(typeName);
-    }
-
     if (typeName == L"CrossCppWPApp.MainPage")
     {
         ::XamlTypeInfo::InfoProvider::XamlUserType^ userType = ref new ::XamlTypeInfo::InfoProvider::XamlUserType(this, typeName, GetXamlTypeByName(L"Windows.UI.Xaml.Controls.Page"));
@@ -108,36 +98,7 @@
             {
                 return ref new ::CrossCppWPApp::Rest(); 
             };
-        userType->AddMemberName(L"NavigationHelper");
-        userType->AddMemberName(L"DefaultViewModel");
         userType->SetIsLocalType();
-        return userType;
-    }
-
-    if (typeName == L"CrossCppWPApp.Common.NavigationHelper")
-    {
-        ::XamlTypeInfo::InfoProvider::XamlUserType^ userType = ref new ::XamlTypeInfo::InfoProvider::XamlUserType(this, typeName, GetXamlTypeByName(L"Object"));
-        userType->KindOfType = ::Windows::UI::Xaml::Interop::TypeKind::Custom;
-        userType->AddMemberName(L"GoForwardCommand");
-        userType->AddMemberName(L"GoBackCommand");
-        userType->SetIsBindable();
-        userType->SetIsLocalType();
-        return userType;
-    }
-
-    if (typeName == L"Windows.Foundation.Collections.IObservableMap`2<String, Object>")
-    {
-        ::XamlTypeInfo::InfoProvider::XamlUserType^ userType = ref new ::XamlTypeInfo::InfoProvider::XamlUserType(this, typeName, nullptr);
-        userType->KindOfType = ::Windows::UI::Xaml::Interop::TypeKind::Metadata;
-        userType->DictionaryAdd =
-            [](Object^ instance, Object^ key, Object^ item) -> void
-            {
-                auto collection = (Windows::Foundation::Collections::IObservableMap<::Platform::String^, ::Platform::Object^>^)instance;
-                auto newKey = (Platform::String^)key;
-                auto newItem = (Platform::Object^)item;
-                collection->Insert(newKey, newItem);
-            };
-        userType->SetIsReturnTypeStub();
         return userType;
     }
 
@@ -150,17 +111,6 @@
             {
                 return ref new ::CrossCppWPApp::Twitter(); 
             };
-        userType->AddMemberName(L"NavigationHelper");
-        userType->AddMemberName(L"DefaultViewModel");
-        userType->SetIsLocalType();
-        return userType;
-    }
-
-    if (typeName == L"CrossCppWPApp.Common.RelayCommand")
-    {
-        ::XamlTypeInfo::InfoProvider::XamlUserType^ userType = ref new ::XamlTypeInfo::InfoProvider::XamlUserType(this, typeName, GetXamlTypeByName(L"Object"));
-        userType->KindOfType = ::Windows::UI::Xaml::Interop::TypeKind::Custom;
-        userType->SetIsReturnTypeStub();
         userType->SetIsLocalType();
         return userType;
     }
@@ -170,90 +120,8 @@
 
 ::Windows::UI::Xaml::Markup::IXamlMember^ ::XamlTypeInfo::InfoProvider::XamlTypeInfoProvider::CreateXamlMember(::Platform::String^ longMemberName)
 {
-    if (longMemberName == L"CrossCppWPApp.Rest.NavigationHelper")
-    {
-        ::XamlTypeInfo::InfoProvider::XamlMember^ xamlMember = ref new ::XamlTypeInfo::InfoProvider::XamlMember(this, L"NavigationHelper", L"CrossCppWPApp.Common.NavigationHelper");
-        xamlMember->Getter =
-            [](Object^ instance) -> Object^
-            {
-                auto that = (::CrossCppWPApp::Rest^)instance;
-                return that->NavigationHelper;
-            };
-
-        xamlMember->SetIsReadOnly();
-        return xamlMember;
-    }
-
-    if (longMemberName == L"CrossCppWPApp.Rest.DefaultViewModel")
-    {
-        ::XamlTypeInfo::InfoProvider::XamlMember^ xamlMember = ref new ::XamlTypeInfo::InfoProvider::XamlMember(this, L"DefaultViewModel", L"Windows.Foundation.Collections.IObservableMap`2<String, Object>");
-        xamlMember->Getter =
-            [](Object^ instance) -> Object^
-            {
-                auto that = (::CrossCppWPApp::Rest^)instance;
-                return that->DefaultViewModel;
-            };
-
-        xamlMember->SetIsReadOnly();
-        return xamlMember;
-    }
-
-    if (longMemberName == L"CrossCppWPApp.Twitter.NavigationHelper")
-    {
-        ::XamlTypeInfo::InfoProvider::XamlMember^ xamlMember = ref new ::XamlTypeInfo::InfoProvider::XamlMember(this, L"NavigationHelper", L"CrossCppWPApp.Common.NavigationHelper");
-        xamlMember->Getter =
-            [](Object^ instance) -> Object^
-            {
-                auto that = (::CrossCppWPApp::Twitter^)instance;
-                return that->NavigationHelper;
-            };
-
-        xamlMember->SetIsReadOnly();
-        return xamlMember;
-    }
-
-    if (longMemberName == L"CrossCppWPApp.Twitter.DefaultViewModel")
-    {
-        ::XamlTypeInfo::InfoProvider::XamlMember^ xamlMember = ref new ::XamlTypeInfo::InfoProvider::XamlMember(this, L"DefaultViewModel", L"Windows.Foundation.Collections.IObservableMap`2<String, Object>");
-        xamlMember->Getter =
-            [](Object^ instance) -> Object^
-            {
-                auto that = (::CrossCppWPApp::Twitter^)instance;
-                return that->DefaultViewModel;
-            };
-
-        xamlMember->SetIsReadOnly();
-        return xamlMember;
-    }
-
-    if (longMemberName == L"CrossCppWPApp.Common.NavigationHelper.GoForwardCommand")
-    {
-        ::XamlTypeInfo::InfoProvider::XamlMember^ xamlMember = ref new ::XamlTypeInfo::InfoProvider::XamlMember(this, L"GoForwardCommand", L"CrossCppWPApp.Common.RelayCommand");
-        xamlMember->Getter =
-            [](Object^ instance) -> Object^
-            {
-                auto that = (::CrossCppWPApp::Common::NavigationHelper^)instance;
-                return that->GoForwardCommand;
-            };
-
-        xamlMember->SetIsReadOnly();
-        return xamlMember;
-    }
-
-    if (longMemberName == L"CrossCppWPApp.Common.NavigationHelper.GoBackCommand")
-    {
-        ::XamlTypeInfo::InfoProvider::XamlMember^ xamlMember = ref new ::XamlTypeInfo::InfoProvider::XamlMember(this, L"GoBackCommand", L"CrossCppWPApp.Common.RelayCommand");
-        xamlMember->Getter =
-            [](Object^ instance) -> Object^
-            {
-                auto that = (::CrossCppWPApp::Common::NavigationHelper^)instance;
-                return that->GoBackCommand;
-            };
-
-        xamlMember->SetIsReadOnly();
-        return xamlMember;
-    }
-
+    // No Local Properties
+    (void)longMemberName; // Unused parameter
     return nullptr;
 }
 

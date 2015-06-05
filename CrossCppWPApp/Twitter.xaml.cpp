@@ -27,39 +27,8 @@ using namespace Windows::UI::Xaml::Navigation;
 Twitter::Twitter()
 {
 	InitializeComponent();
-	SetValue(_defaultViewModelProperty, ref new Platform::Collections::Map<String^, Platform::Object^>(std::less<String^>()));
-	auto navigationHelper = ref new Common::NavigationHelper(this);
-	SetValue(_navigationHelperProperty, navigationHelper);
-	navigationHelper->LoadState += ref new Common::LoadStateEventHandler(this, &Twitter::LoadState);
-	navigationHelper->SaveState += ref new Common::SaveStateEventHandler(this, &Twitter::SaveState);
 }
 
-DependencyProperty^ Twitter::_defaultViewModelProperty =
-DependencyProperty::Register("DefaultViewModel",
-TypeName(IObservableMap<String^, Platform::Object^>::typeid), TypeName(Twitter::typeid), nullptr);
-
-/// <summary>
-/// Used as a trivial view model.
-/// </summary>
-IObservableMap<String^, Platform::Object^>^ Twitter::DefaultViewModel::get()
-{
-	return safe_cast<IObservableMap<String^, Platform::Object^>^>(GetValue(_defaultViewModelProperty));
-}
-
-DependencyProperty^ Twitter::_navigationHelperProperty =
-DependencyProperty::Register("NavigationHelper",
-TypeName(Common::NavigationHelper::typeid), TypeName(Twitter::typeid), nullptr);
-
-/// <summary>
-/// Gets an implementation of <see cref="NavigationHelper"/> designed to be
-/// used as a trivial view model.
-/// </summary>
-Common::NavigationHelper^ Twitter::NavigationHelper::get()
-{
-	return safe_cast<Common::NavigationHelper^>(GetValue(_navigationHelperProperty));
-}
-
-#pragma region Navigation support
 
 /// The methods provided in this section are simply used to allow
 /// NavigationHelper to respond to the page's navigation methods.
@@ -72,48 +41,10 @@ Common::NavigationHelper^ Twitter::NavigationHelper::get()
 
 void Twitter::OnNavigatedTo(NavigationEventArgs^ e)
 {
-	NavigationHelper->OnNavigatedTo(e);
-}
-
-void Twitter::OnNavigatedFrom(NavigationEventArgs^ e)
-{
-	NavigationHelper->OnNavigatedFrom(e);
-}
-
-#pragma endregion
-
-/// <summary>
-/// Populates the page with content passed during navigation. Any saved state is also
-/// provided when recreating a page from a prior session.
-/// </summary>
-/// <param name="sender">
-/// The source of the event; typically <see cref="NavigationHelper"/>
-/// </param>
-/// <param name="e">Event data that provides both the navigation parameter passed to
-/// <see cref="Frame::Navigate(Type, Object)"/> when this page was initially requested and
-/// a dictionary of state preserved by this page during an earlier
-/// session. The state will be null the first time a page is visited.</param>
-void Twitter::LoadState(Object^ sender, Common::LoadStateEventArgs^ e)
-{
-	(void) sender;	// Unused parameter
 	(void) e;	// Unused parameter
 }
 
-/// <summary>
-/// Preserves state associated with this page in case the application is suspended or the
-/// page is discarded from the navigation cache.  Values must conform to the serialization
-/// requirements of <see cref="SuspensionManager::SessionState"/>.
-/// </summary>
-/// <param name="sender">The source of the event; typically <see cref="NavigationHelper"/></param>
-/// <param name="e">Event data that provides an empty dictionary to be populated with
-/// serializable state.</param>
-void Twitter::SaveState(Object^ sender, Common::SaveStateEventArgs^ e){
-	(void) sender;	// Unused parameter
-	(void) e; // Unused parameter
-}
-
-
-void CrossCppWPApp::Twitter::btnRetrieveTweet_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+void CrossCppWPApp::Twitter::btnRetrieveTweet_Click(Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
 	/*string str = dynamic_cast<LastTweetLoadedEvent*>(evnt)->getTweet();
 	wstring wid_str = wstring(str.begin(), str.end());

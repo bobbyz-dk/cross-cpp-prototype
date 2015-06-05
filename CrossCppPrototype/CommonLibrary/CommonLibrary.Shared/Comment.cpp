@@ -3,11 +3,11 @@
 namespace model
 {
 	using namespace std;
-	using namespace json_spirit;
+	//using namespace json_spirit;
 
 	// Get current date/time, format is YYYY-MM-DD.HH:mm:ss
 	const std::string currentDateTime() {
-		time_t     now = time(0);
+		/*time_t     now = time(0);
 		struct tm  tstruct;
 		char       buf[80];
 		tstruct = *localtime(&now);
@@ -15,7 +15,8 @@ namespace model
 		// for more information about date/time format
 		strftime(buf, sizeof(buf), "%Y-%m-%d %X", &tstruct);
 
-		return buf;
+		return buf;*/
+		return "";
 	}
 
 	Comment::Comment() {}
@@ -33,11 +34,13 @@ namespace model
 
 	string Comment::ToJSON()
 	{
-		Object comment;
+		/*Object comment;
 
 		comment.push_back(Pair("text", this->text));
 		comment.push_back(Pair("email", this->email));
 		comment.push_back(Pair("created", this->created));
 		return write(comment, Output_options::pretty_print, 0);
+		*/
+		return "";
 	}
 }
