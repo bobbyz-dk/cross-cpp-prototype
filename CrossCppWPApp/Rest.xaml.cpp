@@ -35,12 +35,6 @@ Rest::Rest()
 	navigationHelper->SaveState += ref new Common::SaveStateEventHandler(this, &Rest::SaveState);
 
 	rest = new RestApi();
-	publisher = ref new Publisher();
-
-	publisher->FireEvent +=
-		ref new CustomEventHandler(
-			this,
-			&Rest::MyEventHandler);
 }
 
 DependencyProperty^ Rest::_defaultViewModelProperty =
@@ -121,25 +115,19 @@ void Rest::SaveState(Object^ sender, Common::SaveStateEventArgs^ e){
 	(void) e; // Unused parameter
 }
 
-void Rest::MyEventHandler(Publisher^ mc, size_t nativeClassPtr)
-{
-	void *ptr = (void*)nativeClassPtr;
-	Event* evnt = (Event*)ptr;
-	switch (evnt->type)
-	{
-	case Event::EventType::PostComment:
-		rest->PostComment(dynamic_cast<PostCommentEvent*>(evnt)->getComment());
-		break;
-		/*case Event::EventType::LastTweetLoaded:
-		string str = dynamic_cast<LastTweetLoadedEvent*>(evnt)->getTweet();
-		wstring wid_str = wstring(str.begin(), str.end());
-		const wchar_t* w_char = wid_str.c_str();
-		Platform::String^ p_string = ref new Platform::String(w_char);
-		break;*/
-	}
-}
-
 void CrossCppWPApp::Rest::btnPost_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	publisher->PostComment(txtComment->Text, txtEmail->Text);
+	std::wstring wsText(txtComment->Text->Data());
+	std::string strText(wsText.begin(), wsText.end());
+	std::wstring wsEmail(txtEmail->Text->Data());
+	std::string strEmail(wsEmail.begin(), wsEmail.end());
+
+	Comment comment = Comment(strText, strEmail);
+	rest->PostComment(comment);
+}
+
+
+void CrossCppWPApp::Rest::btnGet_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+
 }

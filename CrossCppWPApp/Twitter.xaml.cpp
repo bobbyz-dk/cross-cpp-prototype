@@ -32,13 +32,6 @@ Twitter::Twitter()
 	SetValue(_navigationHelperProperty, navigationHelper);
 	navigationHelper->LoadState += ref new Common::LoadStateEventHandler(this, &Twitter::LoadState);
 	navigationHelper->SaveState += ref new Common::SaveStateEventHandler(this, &Twitter::SaveState);
-
-	publisher = ref new Publisher();
-
-	publisher->FireEvent +=
-		ref new CustomEventHandler(
-			this,
-			&Twitter::MyEventHandler);
 }
 
 DependencyProperty^ Twitter::_defaultViewModelProperty =
@@ -122,23 +115,9 @@ void Twitter::SaveState(Object^ sender, Common::SaveStateEventArgs^ e){
 
 void CrossCppWPApp::Twitter::btnRetrieveTweet_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	publisher->LoadLastTweet(txtScreenName->Text);
-}
-
-void CrossCppWPApp::Twitter::MyEventHandler(Publisher^ mc, size_t nativeClassPtr)
-{
-	void *ptr = (void*)nativeClassPtr;
-	Event* evnt = (Event*)ptr;
-	string tweet;
-
-	switch (evnt->type)
-	{
-		case Event::EventType::LastTweetLoaded:
-		string str = dynamic_cast<LastTweetLoadedEvent*>(evnt)->getTweet();
-		wstring wid_str = wstring(str.begin(), str.end());
-		const wchar_t* w_char = wid_str.c_str();
-		Platform::String^ p_string = ref new Platform::String(w_char);
-		lblResult->Text = p_string;
-		break;
-	}
+	/*string str = dynamic_cast<LastTweetLoadedEvent*>(evnt)->getTweet();
+	wstring wid_str = wstring(str.begin(), str.end());
+	const wchar_t* w_char = wid_str.c_str();
+	Platform::String^ p_string = ref new Platform::String(w_char);
+	lblResult->Text = p_string;*/
 }

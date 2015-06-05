@@ -126,7 +126,6 @@
     <ClInclude Include="MainPage.xaml.h">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </ClInclude>
-    <ClInclude Include="Publisher.h" />
     <ClInclude Include="Rest.xaml.h">
       <DependentUpon>Rest.xaml</DependentUpon>
     </ClInclude>

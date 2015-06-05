@@ -33,14 +33,17 @@
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="..\CrossCppPrototype\CommonLibrary\CommonLibrary.Shared\log.cpp" />
     <ClCompile Include="RestApi.WP.cpp" />
+    <ClCompile Include="Rest.xaml.cpp" />
+    <ClCompile Include="Twitter.xaml.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h" />
     <ClInclude Include="MainPage.xaml.h" />
-    <ClInclude Include="Publisher.h" />
     <ClInclude Include="RestApi.WP.h" />
     <ClInclude Include="TwitterApi.WP.h" />
+    <ClInclude Include="Rest.xaml.h" />
+    <ClInclude Include="Twitter.xaml.h" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />

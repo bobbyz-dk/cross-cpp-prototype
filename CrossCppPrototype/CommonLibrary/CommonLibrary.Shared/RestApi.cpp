@@ -16,6 +16,6 @@ namespace RestApiSpace
 
 	void RestApi::PostComment(Comment comment)
 	{
-
+		printf("Comment: %s", comment.ToString());
 	}
 }

@@ -7,12 +7,10 @@
 
 #include "Rest.g.h"
 #include "Common\NavigationHelper.h"
-#include "Publisher.h"
 #include "RestApi.h"
 
 namespace CrossCppWPApp
 {
-	using namespace EventHandling;
 	using namespace RestApiSpace;
 
 	/// <summary>
@@ -52,10 +50,9 @@ namespace CrossCppWPApp
 		static Windows::UI::Xaml::DependencyProperty^ _defaultViewModelProperty;
 		static Windows::UI::Xaml::DependencyProperty^ _navigationHelperProperty;
 
-		void MyEventHandler(Publisher^ mc, size_t nativeClassPtr);
-		Publisher^ publisher;
 		RestApi* rest;
 		void btnPost_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void btnGet_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 	};
 
 }

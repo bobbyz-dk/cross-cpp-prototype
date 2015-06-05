@@ -14,9 +14,9 @@
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Comment.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CommonLibrary.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)DBManager.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Event.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)libtwitcurl\base64.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)libtwitcurl\HMAC_SHA1.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)libtwitcurl\oauthlib.cpp" />
@@ -33,7 +33,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Comment.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonLibrary.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)DBManager.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Event.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libtwitcurl\base64.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libtwitcurl\HMAC_SHA1.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)libtwitcurl\include\curl\curl.h" />

@@ -7,11 +7,9 @@
 
 #include "Twitter.g.h"
 #include "Common\NavigationHelper.h"
-#include "Publisher.h"
 
 namespace CrossCppWPApp
 {
-	using namespace EventHandling;
 
 	/// <summary>
 	/// A basic page that provides characteristics common to most applications.
@@ -50,8 +48,6 @@ namespace CrossCppWPApp
 		static Windows::UI::Xaml::DependencyProperty^ _defaultViewModelProperty;
 		static Windows::UI::Xaml::DependencyProperty^ _navigationHelperProperty;
 		void btnRetrieveTweet_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
-		void MyEventHandler(Publisher^ mc, size_t nativeClassPtr);
-		Publisher^ publisher;
 	};
 
 }
