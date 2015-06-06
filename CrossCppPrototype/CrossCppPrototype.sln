@@ -11,10 +11,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommonLibrary.iOS", "Common
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CrossCppWPApp", "..\CrossCppWPApp\CrossCppWPApp.vcxproj", "{9D669285-8F9E-4B2B-939C-825960C1CC14}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CrossCppWPApp2", "CrossCppWPApp2\CrossCppWPApp2.vcxproj", "{CEB1C2CC-0D71-430F-9C70-203155829982}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		CommonLibrary\CommonLibrary.Shared\CommonLibrary.Shared.vcxitems*{9d669285-8f9e-4b2b-939c-825960c1cc14}*SharedItemsImports = 4
 		CommonLibrary\CommonLibrary.Shared\CommonLibrary.Shared.vcxitems*{851653e8-1744-4866-84a8-4d069f2343b9}*SharedItemsImports = 4
+		CommonLibrary\CommonLibrary.Shared\CommonLibrary.Shared.vcxitems*{ceb1c2cc-0d71-430f-9c70-203155829982}*SharedItemsImports = 4
 		CommonLibrary\CommonLibrary.Shared\CommonLibrary.Shared.vcxitems*{3a653cd2-2725-4670-8dce-124dfe6f269f}*SharedItemsImports = 4
 		CommonLibrary\CommonLibrary.Shared\CommonLibrary.Shared.vcxitems*{cf6b0622-5638-4bba-948c-c43b87ed3eb1}*SharedItemsImports = 9
 	EndGlobalSection
@@ -53,6 +56,18 @@ Global
 		{9D669285-8F9E-4B2B-939C-825960C1CC14}.Release|x86.ActiveCfg = Release|Win32
 		{9D669285-8F9E-4B2B-939C-825960C1CC14}.Release|x86.Build.0 = Release|Win32
 		{9D669285-8F9E-4B2B-939C-825960C1CC14}.Release|x86.Deploy.0 = Release|Win32
+		{CEB1C2CC-0D71-430F-9C70-203155829982}.Debug|ARM.ActiveCfg = Debug|ARM
+		{CEB1C2CC-0D71-430F-9C70-203155829982}.Debug|ARM.Build.0 = Debug|ARM
+		{CEB1C2CC-0D71-430F-9C70-203155829982}.Debug|ARM.Deploy.0 = Debug|ARM
+		{CEB1C2CC-0D71-430F-9C70-203155829982}.Debug|x86.ActiveCfg = Debug|Win32
+		{CEB1C2CC-0D71-430F-9C70-203155829982}.Debug|x86.Build.0 = Debug|Win32
+		{CEB1C2CC-0D71-430F-9C70-203155829982}.Debug|x86.Deploy.0 = Debug|Win32
+		{CEB1C2CC-0D71-430F-9C70-203155829982}.Release|ARM.ActiveCfg = Release|ARM
+		{CEB1C2CC-0D71-430F-9C70-203155829982}.Release|ARM.Build.0 = Release|ARM
+		{CEB1C2CC-0D71-430F-9C70-203155829982}.Release|ARM.Deploy.0 = Release|ARM
+		{CEB1C2CC-0D71-430F-9C70-203155829982}.Release|x86.ActiveCfg = Release|Win32
+		{CEB1C2CC-0D71-430F-9C70-203155829982}.Release|x86.Build.0 = Release|Win32
+		{CEB1C2CC-0D71-430F-9C70-203155829982}.Release|x86.Deploy.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

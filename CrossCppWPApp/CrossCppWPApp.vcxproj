@@ -76,7 +76,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>C:\master-dev\cross-cpp-prototype\CrossCppPrototype\CommonLibrary\CommonLibrary.Shared\json_spirit;C:\master-dev\cross-cpp-prototype\CrossCppPrototype\CommonLibrary\CommonLibrary.Shared\libtwitcurl\include;C:\Users\Bobby\Downloads\poco-1.6.0\poco-1.6.0\Net\include;C:\Users\Bobby\Downloads\boost_1_46_0\boost_1_46_0\boost\spirit\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\master-dev\cross-cpp-prototype\CrossCppWPApp\poco;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\master-dev\cross-cpp-prototype\CrossCppWPApp\poco;C:\Users\Bobby\Downloads\poco-1.6.0\poco-1.6.0\bin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
@@ -181,10 +181,15 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\Users\Bobby\Downloads\poco-1.6.0\poco-1.6.0\bin\PocoNetd.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <SDKReference Include="SQLite.WP81, Version=3.8.10" />
+    <SDKReference Include="SQLite.WP81, Version=3.8.10">
+      <Private>true</Private>
+    </SDKReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -20,7 +20,7 @@ namespace Windows {
     }
 }
 
-namespace CrossCppWPApp
+namespace CrossCppWPApp2
 {
     partial ref class Rest : public ::Windows::UI::Xaml::Controls::Page, 
         public ::Windows::UI::Xaml::Markup::IComponentConnector

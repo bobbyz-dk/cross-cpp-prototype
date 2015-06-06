@@ -8,7 +8,7 @@
 #include "Rest.g.h"
 #include "RestApi.h"
 
-namespace CrossCppWPApp
+namespace CrossCppWPApp2
 {
 	using namespace RestApiSpace;
 

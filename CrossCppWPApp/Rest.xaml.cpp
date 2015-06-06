@@ -6,7 +6,7 @@
 #include "pch.h"
 #include "Rest.xaml.h"
 
-using namespace CrossCppWPApp;
+using namespace CrossCppWPApp2;
 using namespace RestApiSpace;
 
 using namespace Platform;

@@ -56,5 +56,6 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\Debug\sqlite3.dll" />
+    <None Include="..\..\..\Users\Bobby\Downloads\poco-1.6.0\poco-1.6.0\bin\PocoNetd.dll" />
   </ItemGroup>
 </Project>
