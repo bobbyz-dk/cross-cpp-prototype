@@ -48,5 +48,6 @@
     <None Include="PocoFoundationd.dll" />
     <None Include="PocoJSONd.dll" />
     <None Include="PocoNetd.dll" />
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

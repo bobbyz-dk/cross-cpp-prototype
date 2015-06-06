@@ -168,6 +168,7 @@ XCOPY "c:\master-dev\cross-cpp-prototype\CrossCppPrototype\packages\sqlite.redis
     <SDKReference Include="SQLite.WP81, Version=3.8.10" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="PocoFoundationd.dll">
       <DeploymentContent>true</DeploymentContent>
     </None>
@@ -180,5 +181,18 @@ XCOPY "c:\master-dev\cross-cpp-prototype\CrossCppPrototype\packages\sqlite.redis
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\poco.foundation.redist.1.4.6-p4\build\native\poco.foundation.redist.targets" Condition="Exists('..\packages\poco.foundation.redist.1.4.6-p4\build\native\poco.foundation.redist.targets')" />
+    <Import Project="..\packages\poco.foundation.1.4.6-p4\build\native\poco.foundation.targets" Condition="Exists('..\packages\poco.foundation.1.4.6-p4\build\native\poco.foundation.targets')" />
+    <Import Project="..\packages\poco.net.redist.1.4.6-p4\build\native\poco.net.redist.targets" Condition="Exists('..\packages\poco.net.redist.1.4.6-p4\build\native\poco.net.redist.targets')" />
+    <Import Project="..\packages\poco.net.1.4.6-p4\build\native\poco.net.targets" Condition="Exists('..\packages\poco.net.1.4.6-p4\build\native\poco.net.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\poco.foundation.redist.1.4.6-p4\build\native\poco.foundation.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\poco.foundation.redist.1.4.6-p4\build\native\poco.foundation.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\poco.foundation.1.4.6-p4\build\native\poco.foundation.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\poco.foundation.1.4.6-p4\build\native\poco.foundation.targets'))" />
+    <Error Condition="!Exists('..\packages\poco.net.redist.1.4.6-p4\build\native\poco.net.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\poco.net.redist.1.4.6-p4\build\native\poco.net.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\poco.net.1.4.6-p4\build\native\poco.net.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\poco.net.1.4.6-p4\build\native\poco.net.targets'))" />
+  </Target>
 </Project>
