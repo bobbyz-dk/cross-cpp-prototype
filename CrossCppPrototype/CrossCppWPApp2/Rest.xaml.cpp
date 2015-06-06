@@ -25,7 +25,7 @@ Rest::Rest()
 {
 	InitializeComponent();
 
-	//rest = new RestApi();
+	rest = new RestApi();
 }
 
 /// <summary>
@@ -47,7 +47,7 @@ void CrossCppWPApp2::Rest::btnPost_Click(Platform::Object^ sender, Windows::UI::
 	std::string strEmail(wsEmail.begin(), wsEmail.end());
 
 	Comment comment = Comment(strText, strEmail);
-	//rest->PostComment(comment);
+	rest->PostComment(comment);
 	OutputDebugStringW(L"Comment posted!\n");
 }
 

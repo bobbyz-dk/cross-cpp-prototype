@@ -7,12 +7,12 @@
 
 #include "Rest.g.h"
 #include "Comment.h"
-//#include "RestApi.h"
+#include "RestApi.h"
 
 namespace CrossCppWPApp2
 {
 	using namespace model;
-	//using namespace RestApiSpace;
+	using namespace RestApiSpace;
 
 	/// <summary>
 	/// An empty page that can be used on its own or navigated to within a Frame.
@@ -29,6 +29,6 @@ namespace CrossCppWPApp2
 		void btnPost_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 		void btnGet_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 
-		//RestApi* rest;
+		RestApi* rest;
 	};
 }

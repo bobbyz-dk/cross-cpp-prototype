@@ -17,7 +17,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Comment.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)CommonLibrary.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)DBManager.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)log.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)RestApi.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Text.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)TextDao.cpp" />
