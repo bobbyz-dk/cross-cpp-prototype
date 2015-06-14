@@ -31,12 +31,14 @@
     <ClCompile Include="App.xaml.cpp" />
     <ClCompile Include="MainPage.xaml.cpp" />
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="..\CommonLibrary\CommonLibrary.Shared\log.cpp" />
+    <ClCompile Include="Rest.xaml.cpp" />
+    <ClCompile Include="log.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h" />
     <ClInclude Include="MainPage.xaml.h" />
+    <ClInclude Include="Rest.xaml.h" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />
@@ -46,9 +48,7 @@
     <Page Include="Rest.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="PocoFoundationd.dll" />
     <None Include="PocoJSONd.dll" />
-    <None Include="PocoNetd.dll" />
     <None Include="packages.config" />
   </ItemGroup>
 </Project>

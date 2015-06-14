@@ -95,12 +95,12 @@
       <AdditionalIncludeDirectories>C:\Users\Bobby\Downloads\poco-1.6.0\poco-1.6.0\Foundation\include;C:\Users\Bobby\Downloads\poco-1.6.0\poco-1.6.0\JSON\include;C:\Users\Bobby\Downloads\poco-1.6.0\poco-1.6.0\Net\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>c:\Users\Bobby\Downloads\poco-1.6.0\poco-1.6.0\lib\PocoFoundationd.lib;c:\Users\Bobby\Downloads\poco-1.6.0\poco-1.6.0\lib\PocoNetd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>XCOPY "c:\master-dev\cross-cpp-prototype\CrossCppPrototype\packages\sqlite.redist.3.8.4.2\build\native\bin\Win32\Debug\sqlite3.dll" "c:\master-dev\cross-cpp-prototype\CrossCppPrototype\Debug\CrossCppWPApp2\" /D /K /Y
-XCOPY "c:\master-dev\cross-cpp-prototype\CrossCppPrototype\packages\poco.foundation.redist.1.4.6-p4\build\native\bin\Win32\Debug\PocoFoundationd.dll" "c:\master-dev\cross-cpp-prototype\CrossCppPrototype\Debug\CrossCppWPApp2\" /D /K /Y
-XCOPY "c:\master-dev\cross-cpp-prototype\CrossCppPrototype\packages\poco.net.redist.1.4.6-p4\build\native\bin\Win32\Debug\PocoNetd.dll" "c:\master-dev\cross-cpp-prototype\CrossCppPrototype\Debug\CrossCppWPApp2\" /D /K /Y</Command>
+XCOPY "c:\Users\Bobby\Downloads\poco-1.6.0\poco-1.6.0\bin\PocoFoundationd.dll" "$(TargetDir)" /D /K /Y
+XCOPY "c:\Users\Bobby\Downloads\poco-1.6.0\poco-1.6.0\bin\PocoNetd.dll" "$(TargetDir)" /D /K /Y</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Copy DLLs to Target Directory</Message>
@@ -149,10 +149,10 @@ XCOPY "c:\master-dev\cross-cpp-prototype\CrossCppPrototype\packages\poco.net.red
     <Image Include="Assets\WideLogo.scale-240.png" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\CommonLibrary\CommonLibrary.Shared\log.cpp" />
     <ClCompile Include="App.xaml.cpp">
       <DependentUpon>App.xaml</DependentUpon>
     </ClCompile>
+    <ClCompile Include="log.cpp" />
     <ClCompile Include="MainPage.xaml.cpp">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </ClCompile>
@@ -171,13 +171,7 @@ XCOPY "c:\master-dev\cross-cpp-prototype\CrossCppPrototype\packages\poco.net.red
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="PocoFoundationd.dll">
-      <DeploymentContent>true</DeploymentContent>
-    </None>
     <None Include="PocoJSONd.dll">
-      <DeploymentContent>true</DeploymentContent>
-    </None>
-    <None Include="PocoNetd.dll">
       <DeploymentContent>true</DeploymentContent>
     </None>
   </ItemGroup>

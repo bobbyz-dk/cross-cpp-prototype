@@ -25,8 +25,11 @@ namespace RestApiSpace
 		
 		/*try
 		{*/
-			const Poco::URI uri("http://localhost:2403");
-			/*Poco::Net::HTTPClientSession session(uri.getHost(), uri.getPort());
+			/*const Poco::URI uri("http://localhost:2403");
+			//Poco::Net::HTTPClientSession session("http://localhost", 2403);
+			Poco::Net::HTTPClientSession session(uri.getHost(), uri.getPort());
+			//Poco::Net::HTTPClientSession session();
+			
 			Poco::Net::HTTPRequest req(Poco::Net::HTTPRequest::HTTP_POST, "/comment");
 			req.setContentType("application/x-www-form-urlencoded\r\n");
 			req.setKeepAlive(true);

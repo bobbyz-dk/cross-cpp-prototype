@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include <string>
+#include <cstdio>
+#include <iostream>
+#include <fstream>
+#include "twitcurl.h"
 
 namespace twitter
 {

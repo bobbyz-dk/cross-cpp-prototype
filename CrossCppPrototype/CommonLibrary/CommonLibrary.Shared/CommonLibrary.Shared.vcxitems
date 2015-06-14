@@ -34,9 +34,4 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Text.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)TwitterApi.h" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)TextDB.db">
-      <DeploymentContent>true</DeploymentContent>
-    </None>
-  </ItemGroup>
 </Project>

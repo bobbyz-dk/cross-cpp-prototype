@@ -4,7 +4,7 @@
     <ClCompile Include="CommonLibrary.Android.cpp" />
     <ClCompile Include="android_TextDao.cpp" />
     <ClCompile Include="sqlite3.c" />
-    <ClCompile Include="..\CommonLibrary.Shared\log.cpp" />
+    <ClCompile Include="log.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

@@ -20,8 +20,9 @@ DBManager::~DBManager()
 
 char * DBManager::getDbPath()
 {
-	//LOGD("DBManager", strcat("getDbPath", dbPath));
+	logdebug("DBManager", "getDbPath_begin");
 	return dbPath;
+	logdebug("DBManager", "getDbPath_end");
 }
 
 bool DBManager::open(char* filename)

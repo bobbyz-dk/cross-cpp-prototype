@@ -56,6 +56,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <IncludePath>$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\4.8\include;c:\master-dev\cross-cpp-prototype\CrossCppPrototype\CommonLibrary\CommonLibrary.Android;</IncludePath>
+    <LibraryPath>C:\Users\Bobby\Downloads\twitcurl-master\libtwitcurl\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
@@ -63,7 +64,15 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalOptions>-D PLATFORM=0 %(AdditionalOptions)</AdditionalOptions>
       <Verbose>true</Verbose>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+      <AdditionalIncludeDirectories>C:\Users\Bobby\Downloads\poco-1.6.0\poco-1.6.0\Foundation\include;C:\Users\Bobby\Downloads\poco-1.6.0\poco-1.6.0\Net\include;C:\Users\Bobby\Downloads\curl-7.42.1\builds\libcurl-vc14-x86-release-static-ssl-static-ipv6\include;C:\Users\Bobby\Downloads\twitcurl-master\libtwitcurl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>POCO_ANDROID;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>c:\Users\Bobby\Downloads\twitcurl-master\libtwitcurl\Release\twitcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>c:\Users\Bobby\Downloads\twitcurl-master\libtwitcurl\Release;C:\Users\Bobby\Downloads\poco-1.6.0\poco-1.6.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
@@ -93,9 +102,9 @@
     <ClInclude Include="sqlite3.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\CommonLibrary.Shared\log.cpp" />
     <ClCompile Include="android_TextDao.cpp" />
     <ClCompile Include="CommonLibrary.Android.cpp" />
+    <ClCompile Include="log.cpp" />
     <ClCompile Include="sqlite3.c" />
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +114,10 @@
   <ImportGroup Label="ExtensionTargets">
     <Import Project="..\..\packages\sqlite.redist.3.8.4.2\build\native\sqlite.redist.targets" Condition="Exists('..\..\packages\sqlite.redist.3.8.4.2\build\native\sqlite.redist.targets')" />
     <Import Project="..\..\packages\sqlite.3.8.4.2\build\native\sqlite.targets" Condition="Exists('..\..\packages\sqlite.3.8.4.2\build\native\sqlite.targets')" />
+    <Import Project="..\..\packages\poco.foundation.redist.1.4.6-p4\build\native\poco.foundation.redist.targets" Condition="Exists('..\..\packages\poco.foundation.redist.1.4.6-p4\build\native\poco.foundation.redist.targets')" />
+    <Import Project="..\..\packages\poco.foundation.1.4.6-p4\build\native\poco.foundation.targets" Condition="Exists('..\..\packages\poco.foundation.1.4.6-p4\build\native\poco.foundation.targets')" />
+    <Import Project="..\..\packages\poco.net.redist.1.4.6-p4\build\native\poco.net.redist.targets" Condition="Exists('..\..\packages\poco.net.redist.1.4.6-p4\build\native\poco.net.redist.targets')" />
+    <Import Project="..\..\packages\poco.net.1.4.6-p4\build\native\poco.net.targets" Condition="Exists('..\..\packages\poco.net.1.4.6-p4\build\native\poco.net.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -112,5 +125,9 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\sqlite.redist.3.8.4.2\build\native\sqlite.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\sqlite.redist.3.8.4.2\build\native\sqlite.redist.targets'))" />
     <Error Condition="!Exists('..\..\packages\sqlite.3.8.4.2\build\native\sqlite.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\sqlite.3.8.4.2\build\native\sqlite.targets'))" />
+    <Error Condition="!Exists('..\..\packages\poco.foundation.redist.1.4.6-p4\build\native\poco.foundation.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\poco.foundation.redist.1.4.6-p4\build\native\poco.foundation.redist.targets'))" />
+    <Error Condition="!Exists('..\..\packages\poco.foundation.1.4.6-p4\build\native\poco.foundation.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\poco.foundation.1.4.6-p4\build\native\poco.foundation.targets'))" />
+    <Error Condition="!Exists('..\..\packages\poco.net.redist.1.4.6-p4\build\native\poco.net.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\poco.net.redist.1.4.6-p4\build\native\poco.net.redist.targets'))" />
+    <Error Condition="!Exists('..\..\packages\poco.net.1.4.6-p4\build\native\poco.net.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\poco.net.1.4.6-p4\build\native\poco.net.targets'))" />
   </Target>
 </Project>

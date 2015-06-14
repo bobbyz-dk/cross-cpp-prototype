@@ -8,6 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Text to insert" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtText" HorizontalAlignment="Left" Margin="10,28,0,0" TextWrapping="Wrap" Text="VC++ WP" VerticalAlignment="Top" Width="380"/>
+        <Button x:Name="btnInsert" Content="Insert" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Click="btnInsert_Click"/>
+        <TextBlock Text="Texts" Margin="10,130,10,494" />
+        <ListView x:Name="lvTexts" Height="494" Margin="10,146,10,0">
+        </ListView>
     </Grid>
 </Page>
